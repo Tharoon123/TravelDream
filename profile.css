@@ -1,0 +1,40 @@
+/* Basic styling for the logout menu */
+.logout-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .user-name {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Style for the navigation menu */
+  nav {
+    position: relative;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  #userInfo {
+    position: relative;
+  }
+
+  #logoutLink{
+    font-size: 15px;
+    color: black;
+  }
+  
