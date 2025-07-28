@@ -14,6 +14,7 @@ let lastError = null;
 
 for (const url of urlsToTry) {
   try {
+    console.log(`Trying URL: `,formData);
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -127,7 +128,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
       alert('Submission failed: ' + result.error);
     }
   } catch (error) {
-    alert('Error: ' + error.message);
+    alert('Error:aaaa ' + error.message);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalBtnText;
