@@ -146,21 +146,22 @@
       e.preventDefault();
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
-
+  
       try {
         console.log("Submitting booking data:", data);
-        const response = await fetch("http://localhost:3000/api/book", {
+  
+        const response = await fetch("/api/book", {  // ✅ Relative path
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify(data)
         });
-
+  
         if (!response.ok) {
           throw new Error("Server error. Please try again.");
         }
-
+  
         const result = await response.text();
         alert("✅ Booking submitted successfully!\n" + result);
         this.reset();
@@ -169,7 +170,7 @@
         alert("❌ Booking failed. Error: " + error.message);
       }
     });
-  </script>
+  </script>  
 </body>
 
 </html>
