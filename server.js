@@ -43,6 +43,7 @@ app.post('/api/book', (req, res) => {
     kids, kid_ages, nationality
   } = req.body;
 
+  console.log('Booking Request:', req.body);  
   const sql = `
     INSERT INTO bookings
     (name, email, contact, arrival, departure, adults, kids, kid_ages, nationality)
@@ -58,7 +59,7 @@ app.post('/api/book', (req, res) => {
       console.error('DB Insert Error:', err);
       return res.status(500).send('Database Error');
     }else{
-      console.log('Booking inserted:', result);
+      console.log('Booking inserted:');
       res.status(200).send('Booking successful');
     }
 
