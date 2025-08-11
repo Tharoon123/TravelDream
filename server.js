@@ -8,6 +8,7 @@ require('dotenv').config();
 const app = express();
 const PORT = 3000;
 
+// app.use(cors());
 app.use(cors({
   origin: 'http://51.20.51.0/', // or your IP
   methods: ['POST']
